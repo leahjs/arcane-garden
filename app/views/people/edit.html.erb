@@ -1,0 +1,11 @@
+<h1>4. Edit <%= @peoplefind.name %></h1>
+
+<%= form_for(@peoplefind, url: {action: 'update'}) do |f| %>
+  <div class="form-section">
+      <%= f.label :favoriteCity, "Favorite City"%>
+      <%= f.text_field :favoriteCity, class: "form-control" %>
+  </div>
+    <%= f.submit "Edit person" %>
+<% end %>
+
+<h4>5. To see <%= @peoplefind.name %> head over to <%= link_to "#{@peoplefind.name}", "/people/#{@peoplefind.id}" %> page.</h4>

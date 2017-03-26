@@ -1,0 +1,5 @@
+<h1>This is <%= @people.name %> and his/hers favorite city is <%= @people.favoriteCity %>.</h1>
+
+<h4>The last person created was <%= @peoplelast.name %> with their favorite city as <%= @peoplelast.favoriteCity %> <%= link_to "(JSON)", "/people/#{@peoplelast.id}.json" %></h4>
+
+<h4> To edit <%= @people.name %> head over to <%= link_to "All People", people_path %></h4>

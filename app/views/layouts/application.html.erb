@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TakeHomeChallenge</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Take-home Challenge", root_path, id: "logo" %></li>
+          <li class="people"><%= link_to "People", people_path %></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="content container">
+
+    <%= yield %>
+
+  </div>
+
+
+</body>
+</html>

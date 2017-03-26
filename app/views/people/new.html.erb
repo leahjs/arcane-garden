@@ -1,0 +1,38 @@
+
+
+<h1>All the People <%= link_to "(JSON)", "/people.json" %></h1>
+
+<% if @allpeople.blank? %>
+  <p>There is no one added yet.</p>
+<% else %>
+<ul>
+  <li>
+    <h4>I.D.</h4>
+    <h4>Name</h4>
+    <h4>City</h4>
+  </li>
+  <% @allpeople.each do |person| %>
+    <li>
+      <h4><%= person.id %></h4>
+      <h4><%= link_to "#{person.name}", "/people/#{person.id}" %></h4>
+      <h4><%= person.favoriteCity %></h4>
+      <%= link_to "Edit", "/people/#{person.id}", method: :put %>
+      <%= link_to "Delete Person", "/people/#{person.id}", method: :delete %>
+    </li>
+  <% end %>
+</ul>
+<% end %>
+
+<h2>2. Add a new person</h2>
+<h6>To add a new person type "Sean" for name and "New York" for city.</h6>
+<%= form_for(@people, url: {action: 'create'}) do |f| %>
+  <div class="form-section">
+    <%= f.label :name, "Name:"%>
+    <%= f.text_field :name%>
+  </div>
+  <div class="form-section">
+      <%= f.label :favoriteCity, "Favorite City:"%>
+      <%= f.text_field :favoriteCity %>
+  </div>
+    <%= f.submit "Add new person" %>
+<% end %>

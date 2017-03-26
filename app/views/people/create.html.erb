@@ -1,0 +1,4 @@
+<h1>You just created <%= @people.name %> with the favorite city of <%= @people.favoriteCity %>.<%= link_to "(JSON)", "/people.json" %></h1>
+
+
+<h4>3. To see the last person created go to <%= link_to "#{@people.name}", "/people/#{@people.id}" %>.</h4>

@@ -1,0 +1,126 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 85%;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+h6 {
+  font-style: italic;
+}
+
+header {
+  height: 4em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);;
+  padding-top: 2em;
+}
+
+.people {
+  display: inline-block;
+  float: right;
+}
+
+.people a {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+#logo {
+  font-size: 22px;
+  color: #0f0323;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover, a#logo:hover{
+  color: blue;
+}
+
+.content {
+  padding-top: 5%;
+}
+
+.content ul {
+  display: table;
+  margin-bottom: 40px;
+}
+
+.content ul li {
+  list-style-type: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  display: list-item;
+}
+
+.content ul li h4 {
+  display: table-cell;
+  padding: 1em;
+  min-width: 11em;
+}
+
+.content ul li a {
+  display: table-cell;
+  min-width: 4em;
+}
+
+.content ul li h4:first-child {
+  color: rgba(51, 51, 51, 0.49);
+  max-width: 2em;
+}
+
+input {
+  border-radius: 2px;
+  border: 1px solid #333;
+  height: 20px;
+}
+
+label {
+  vertical-align: middle;
+}
+.form-section {
+  margin-bottom: 1em;
+}
+
+input[type="submit"] {
+  border-radius: 4px;
+  border: 1px solid #333;
+  background-color: white;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin-bottom: 5em;
+}
+
+input[type="submit"]:hover {
+  background-color: #333;
+  color: white;
+}
